@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600|Lora");
+
+:root {
+  --black-color: #292929;
+  --dark-grey-color: rgba(0, 0, 0, 0.54);
+  --light-grey-color: rgba(0, 0, 0, 0.15);
+  --side-padding: 10%;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+/* nav */
+
+button,
+nav img {
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--side-padding);
+}
+
+nav .main-logo {
+  width: 100px;
+  height: 100px;
+}
+
+nav button {
+  padding: 12px 14px;
+  border-radius: 4px;
+  background: white;
+  color: var(--dark-grey-color);
+  border: 1px solid var(--light-grey-color);
+  font-size: 100%;
+}
+
+nav button:hover {
+  border-color: var(--dark-grey-color);
+}
+
+nav .profile-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid var(--light-grey-color);
+}
+
+nav .profile-img:hover {
+  opacity: 0.8;
+}
+
+/* general */
+
+body > * {
+  margin-bottom: 15px;
+}
+
+.title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 140%;
+}
+
+.description {
+  color: var(--dark-grey-color);
+  font-size: 95%;
+  margin-bottom: 16px;
+}
+
+.post-img > img {
+  margin-bottom: 8px;
+}
+
+.info,
+.date {
+  font-size: 90%;
+}
+
+/* feature */
+
+.categories {
+  padding: 0 var(--side-padding);
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-name {
+  padding: 10px 0;
+  text-transform: uppercase;
+  color: var(--dark-grey-color);
+  cursor: pointer;
+}
+
+.category-name:hover,
+.active {
+  color: var(--black-color) !important;
+}
+
+.featured {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  padding: 0 var(--side-padding);
+}
+
+.featured-cols img {
+  width: 100%;
+  display: block;
+}
+
+.featured-cols > .post {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 100px;
+  grid-gap: 15px;
+}
+
+.featured-cols:first-child > .post {
+  display: block;
+}
+
+.small-size .post-img > img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+
+.small-size .title {
+  font-size: 100%;
+}
+
+.small-size .description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.post-data {
+  overflow: hidden;
+}
+
+.post-data > * {
+  width: 100%;
+}
