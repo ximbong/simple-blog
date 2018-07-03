@@ -132,10 +132,22 @@ body > * {
   display: block;
 }
 
+/* small size */
+
 .small-size .post-img > img {
   height: 100px;
   width: 100px;
   object-fit: cover;
+}
+
+.small-size img {
+  margin-bottom: 0;
+}
+
+.small-size .post-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .small-size .title {
@@ -155,3 +167,24 @@ body > * {
 .post-data > * {
   width: 100%;
 }
+
+.post {
+  margin-bottom: 20px;
+}
+
+.featured-button {
+  margin: 0 var(--side-padding);
+  padding: 10px 0;
+  display: flex;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  color: #3dbd9e;
+  border-bottom: 1px solid var(--light-grey-color);
+}
+
+.featured-button:hover {
+  cursor: pointer;
+  color: #2a8f68;
+}
+
+/* body post */
