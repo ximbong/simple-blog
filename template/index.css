@@ -34,12 +34,11 @@ nav {
 }
 
 nav .main-logo {
-  width: 100px;
-  height: 100px;
+  height: 80px;
 }
 
-nav button {
-  padding: 12px 14px;
+button {
+  padding: 6px 14px;
   border-radius: 4px;
   background: white;
   color: var(--dark-grey-color);
@@ -47,13 +46,13 @@ nav button {
   font-size: 100%;
 }
 
-nav button:hover {
+button:hover {
   border-color: var(--dark-grey-color);
 }
 
 nav .profile-img {
-  width: 55px;
-  height: 55px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   border: 1px solid var(--light-grey-color);
 }
@@ -80,7 +79,7 @@ body > * {
   margin-bottom: 16px;
 }
 
-.post-img > img {
+.big-size .post-img > img {
   margin-bottom: 8px;
 }
 
@@ -174,12 +173,13 @@ body > * {
 
 .featured-button {
   margin: 0 var(--side-padding);
-  padding: 10px 0;
+  padding: 20px 0;
   display: flex;
   justify-content: flex-end;
   text-transform: uppercase;
   color: #3dbd9e;
   border-bottom: 1px solid var(--light-grey-color);
+  margin-bottom: 40px;
 }
 
 .featured-button:hover {
@@ -187,4 +187,71 @@ body > * {
   color: #2a8f68;
 }
 
-/* body post */
+/* main section post */
+section {
+  padding: 0 var(--side-padding);
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 30px;
+}
+
+.section-main .post {
+  display: grid;
+  grid-template-columns: 1fr 150px;
+  grid-template-areas: "data img";
+  margin-bottom: 45px;
+}
+
+.section-main .post-img {
+  grid-area: img;
+}
+
+.section-main .post-img > img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.section-main .post-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* side */
+.section-side {
+  margin: 0 32px;
+}
+
+.col-details {
+  padding: 24px 0;
+}
+
+.section-side .col-title {
+  border-bottom: 1px solid var(--light-grey-color);
+  padding: 15px;
+}
+
+.section-side .post {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 15px;
+  margin-bottom: 24px;
+  font-size: 90%;
+}
+
+.section-side .post .ranking {
+  font-size: 200%;
+  padding: 0 5px;
+  color: var(--dark-grey-color);
+}
+
+.section-side .post .title {
+  font-size: 120%;
+}
+
+.section-side .post .description {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
