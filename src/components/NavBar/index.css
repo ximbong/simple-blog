@@ -1,0 +1,21 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px var(--side-padding);
+}
+
+nav .main-logo {
+  height: 80px;
+}
+
+nav .profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--light-grey-color);
+}
+
+nav .profile-img:hover {
+  opacity: 0.8;
+}
