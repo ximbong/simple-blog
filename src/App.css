@@ -37,3 +37,20 @@ button {
 button:hover {
   border-color: var(--dark-grey-color);
 }
+
+.title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 140%;
+}
+
+.description {
+  color: var(--dark-grey-color);
+  font-size: 95%;
+  margin-bottom: 16px;
+}
+
+.info,
+.date {
+  font-size: 90%;
+}

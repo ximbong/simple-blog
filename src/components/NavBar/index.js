@@ -10,10 +10,10 @@ import * as types from "../../actions";
 import "./index.css";
 
 const NavBar = props => {
-  const location = props.location;
+  const location = props.history.location.pathname;
 
   const Button =
-    location === "home" ? (
+    location === "/" ? (
       <Link to="/new" onClick={() => props.updateLocation("new")}>
         <button>New post</button>
       </Link>
@@ -28,7 +28,9 @@ const NavBar = props => {
       {Button}
       <img src={MainIcon} alt="main-logo" className="main-logo" />
       <div className="avatar">
-        <img src={ProfilePic} alt="profile-pic" className="profile-img" />
+        <Link to="/profile">
+          <img src={ProfilePic} alt="profile-pic" className="profile-img" />
+        </Link>
       </div>
     </nav>
   );
@@ -50,7 +52,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(NavBar);
+export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
