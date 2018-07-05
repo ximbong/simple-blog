@@ -1,6 +1,8 @@
 import React from "react";
-
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+
+import * as types from "../../actions";
 
 import "font-awesome/css/font-awesome.min.css";
 import "./index.css";
@@ -23,7 +25,9 @@ const Displayer = props => {
             </Link>
           </div>
           <div className="delete">
-            <i className="fa fa-trash" />
+            <Link to={`/profile`}>
+              <i className="fa fa-trash" onClick={() => props.deleteData(id)} />
+            </Link>
           </div>
         </div>
       </div>
@@ -32,4 +36,17 @@ const Displayer = props => {
   );
 };
 
-export default Displayer;
+const mapDispatchToProps = dispatch => {
+  return {
+    deleteData: id =>
+      dispatch({
+        type: types.DELETE_DATA,
+        id
+      })
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Displayer);
