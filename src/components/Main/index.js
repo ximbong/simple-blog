@@ -1,7 +1,15 @@
 import React from "react";
 
 import "./index.css";
-import Img from "../../assets/featured-1.jpg";
+import Img1 from "../../assets/featured-1.jpg";
+import Img2 from "../../assets/featured-2.jpeg";
+import Img3 from "../../assets/featured-3.jpeg";
+import Img4 from "../../assets/featured-4.jpeg";
+import Img5 from "../../assets/featured-5.jpg";
+import Img6 from "../../assets/featured-6.jpeg";
+import Img7 from "../../assets/featured-7.jpeg";
+import Img8 from "../../assets/featured-8.jpeg";
+import Img9 from "../../assets/featured-9.jpeg";
 
 const Main = () => {
   return (
@@ -19,7 +27,7 @@ const Main = () => {
         <div className="featured-cols big-size">
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img1} alt="" />
             </div>
             <div className="post-data">
               <div className="title">The Gloves We'll Wear on Mars</div>
@@ -35,7 +43,7 @@ const Main = () => {
         <div className="featured-cols small-size">
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img2} alt="" />
             </div>
             <div className="post-data">
               <div className="title">The Gloves We'll Wear on Mars</div>
@@ -49,7 +57,7 @@ const Main = () => {
           </div>
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img3} alt="" />
             </div>
             <div className="post-data">
               <div className="title">The Gloves We'll Wear on Mars</div>
@@ -63,7 +71,7 @@ const Main = () => {
           </div>
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img4} alt="" />
             </div>
             <div className="post-data">
               <div className="title">The Gloves We'll Wear on Mars</div>
@@ -79,7 +87,35 @@ const Main = () => {
         <div className="featured-cols small-size">
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img5} alt="" />
+            </div>
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
+                The design challenge that'll make or break survival on the Red
+                Planet
+              </div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
+            </div>
+          </div>
+          <div className="post">
+            <div className="post-img">
+              <img src={Img6} alt="" />
+            </div>
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
+                The design challenge that'll make or break survival on the Red
+                Planet
+              </div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
+            </div>
+          </div>
+          <div className="post">
+            <div className="post-img">
+              <img src={Img7} alt="" />
             </div>
             <div className="post-data">
               <div className="title">The Gloves We'll Wear on Mars</div>
@@ -100,7 +136,7 @@ const Main = () => {
         <div className="section-main">
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img6} alt="" />
             </div>
             <div className="post-data">
               <div>
@@ -118,7 +154,7 @@ const Main = () => {
           </div>
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img7} alt="" />
             </div>
             <div className="post-data">
               <div>
@@ -136,7 +172,7 @@ const Main = () => {
           </div>
           <div className="post">
             <div className="post-img">
-              <img src={Img} alt="" />
+              <img src={Img8} alt="" />
             </div>
             <div className="post-data">
               <div>
