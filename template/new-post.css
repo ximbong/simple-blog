@@ -21,6 +21,17 @@ body {
 
 .editor .inputs {
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+}
+
+.editor .inputs div {
+  margin-right: 40px;
+}
+
+.editor .inputs select {
+  height: 50%;
 }
 
 .editor input {

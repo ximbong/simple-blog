@@ -9,3 +9,15 @@
   border-bottom: 1px solid var(--light-grey-color);
   margin-bottom: 20px;
 }
+
+.my-posts {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+  padding: 0 var(--side-padding);
+}
+
+.my-posts img {
+  display: block;
+  width: 100%;
+}
