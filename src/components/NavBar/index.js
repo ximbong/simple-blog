@@ -26,7 +26,9 @@ const NavBar = props => {
   return (
     <nav>
       {Button}
-      <img src={MainIcon} alt="main-logo" className="main-logo" />
+      <Link to="/">
+        <img src={MainIcon} alt="main-logo" className="main-logo" />
+      </Link>
       <div className="avatar">
         <Link to="/profile">
           <img src={ProfilePic} alt="profile-pic" className="profile-img" />
@@ -52,4 +54,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(NavBar);

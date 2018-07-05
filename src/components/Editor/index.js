@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter } from "react-router-dom";
 
 import * as types from "../../actions";
 
@@ -10,6 +10,7 @@ import "./index.css";
 class Editor extends Component {
   constructor(props) {
     super(props);
+
     const id = props.match
       ? parseInt(props.match.params.id, 10)
       : this.props.id;
@@ -37,9 +38,8 @@ class Editor extends Component {
   };
 
   render() {
-    const { title, description, category, content, id } = this.state;
-
-    const action = this.props.action;
+    const { title, description, content, id } = this.state;
+    const { action, history } = this.props;
 
     return (
       <div className="editor">
@@ -80,7 +80,7 @@ class Editor extends Component {
               Save
             </button>
           </Link>
-          <button>Cancel</button>
+          <button onClick={history.goBack}>Cancel</button>
         </div>
       </div>
     );
@@ -111,4 +111,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Editor);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Editor);

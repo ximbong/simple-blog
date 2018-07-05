@@ -5,12 +5,11 @@
 }
 
 .editor {
-  margin: 0 10% 20px 10%;
-  /* border: 1px solid var(--black-color);*/
-  /* padding: 10px; */
+  margin: 0 10%;
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px !important;
 }
 
 .editor .inputs {
