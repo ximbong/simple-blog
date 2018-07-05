@@ -1,9 +1,17 @@
 import React from "react";
+import { connect } from "react-redux";
+
+import Post from "../Post";
 
 import Img from "../../assets/featured-1.jpg";
 import "./index.css";
 
-const Profile = () => {
+const Profile = ({ data }) => {
+  const PostList = Object.keys(data).map(key => {
+    console.log(data[key]);
+    return <Post data={data[key]} key={key} />;
+  });
+
   return (
     <div className="my-posts">
       <div className="post">
@@ -24,8 +32,18 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      {PostList}
     </div>
   );
 };
 
-export default Profile;
+const mapStateToProps = state => {
+  return {
+    data: state.data
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Profile);
