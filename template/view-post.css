@@ -1,0 +1,27 @@
+.displayer {
+  margin: 0 10% 20px 10%;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.post-header .description {
+  margin-bottom: 0;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons > * {
+  padding: 8px 16px;
+}
+.header-icons i {
+  font-size: 150%;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
