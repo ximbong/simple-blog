@@ -23,7 +23,10 @@ class App extends Component {
           <Route path="/" render={props => <NavBar {...props} />} />
           <Route path="/" exact={true} component={Main} />
           <Route path="/new" render={() => <SectionLine action="add" />} />
-          <Route path="/new" render={() => <Editor action="add" />} />
+          <Route
+            path="/new"
+            render={props => <Editor action="add" {...props} />}
+          />
 
           <Route
             path="/post/:id"
@@ -64,4 +67,7 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, null)(App);
+export default connect(
+  mapStateToProps,
+  null
+)(App);
