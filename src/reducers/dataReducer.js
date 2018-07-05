@@ -1,13 +1,13 @@
 import * as types from "../actions";
 
-const initialData = {
-  data: []
-};
+const initialData = {};
 
 const dataReducer = (state = initialData, action) => {
   switch (action.type) {
     case types.ADD_DATA:
-      return [...state, action.data];
+      return { ...state, [action.id]: action.data };
+    case types.EDIT_DATA:
+      return { ...state, [action.id]: action.data };
     default:
       return state;
   }

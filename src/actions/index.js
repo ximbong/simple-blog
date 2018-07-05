@@ -1,6 +1,6 @@
 export const CHANGE_LOCATION = "CHANGE_LOCATION";
-export const UPDATE_DATA = "UPDATE_DATA";
 export const ADD_DATA = "ADD_DATA";
+export const EDIT_DATA = "EDIT_DATA";
 
 export const changeLocation = location => {
   return {
@@ -9,9 +9,18 @@ export const changeLocation = location => {
   };
 };
 
-export const addData = data => {
+export const addData = (data, id) => {
   return {
     type: ADD_DATA,
-    data
+    data,
+    id
+  };
+};
+
+export const editData = (data, id) => {
+  return {
+    type: EDIT_DATA,
+    data,
+    id
   };
 };

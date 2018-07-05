@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
-import locationReducer from "./locationReducer";
 import dataReducer from "./dataReducer";
+import idReducer from "./idReducer";
 
 const rootReducer = combineReducers({
-  location: locationReducer,
-  data: dataReducer
+  data: dataReducer,
+  id: idReducer
 });
 
 export default rootReducer;
