@@ -4,7 +4,12 @@
   --black-color: #292929;
   --dark-grey-color: rgba(0, 0, 0, 0.54);
   --light-grey-color: rgba(0, 0, 0, 0.15);
+  --green-color: #2a8f68;
   --side-padding: 10%;
+}
+
+html {
+  overflow-y: scroll;
 }
 
 * {
@@ -16,7 +21,12 @@
 }
 
 a {
+  text-decoration: none;
   color: inherit;
+}
+
+#root > * {
+  margin-bottom: 10px;
 }
 
 button,
@@ -32,9 +42,11 @@ button {
   color: var(--dark-grey-color);
   border: 1px solid var(--light-grey-color);
   font-size: 100%;
+  outline: 0;
 }
 
 button:hover {
+  transition: 0.5s;
   border-color: var(--dark-grey-color);
 }
 

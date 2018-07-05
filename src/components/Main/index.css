@@ -1,12 +1,6 @@
-#root > * {
-  margin-bottom: 15px;
-}
-
 .big-size .post-img > img {
   margin-bottom: 8px;
 }
-
-/* feature */
 
 .categories {
   padding: 0 var(--side-padding);
@@ -15,7 +9,9 @@
 }
 
 .category-name {
-  padding: 10px 0;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 8px 0;
   text-transform: uppercase;
   color: var(--dark-grey-color);
   cursor: pointer;
@@ -97,7 +93,7 @@
   text-transform: uppercase;
   color: #3dbd9e;
   border-bottom: 1px solid var(--light-grey-color);
-  margin-bottom: 40px;
+  margin-bottom: 30px !important;
 }
 
 .featured-button:hover {

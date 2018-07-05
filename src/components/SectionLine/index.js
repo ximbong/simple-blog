@@ -22,10 +22,10 @@ const SectionLine = ({ action }) => {
 
   return (
     <div className="section-line">
-      <a>{title}</a>
+      <a className="section-title">{title}</a>
       {action === "view-list" && (
-        <Link to="/new">
-          <button>Make a new post</button>
+        <Link className="link-button" to="/new">
+          <button>New post</button>
         </Link>
       )}
     </div>

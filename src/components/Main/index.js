@@ -6,179 +6,179 @@ import Img from "../../assets/featured-1.jpg";
 const Main = () => {
   return (
     <React.Fragment>
-      <div class="categories">
-        <div class="category-name active">Home</div>
-        <div class="category-name ">Future human</div>
-        <div class="category-name">Culture</div>
-        <div class="category-name">Tech</div>
-        <div class="category-name">Entrepreneurship</div>
-        <div class="category-name">Politics</div>
-        <div class="category-name">More</div>
+      <div className="categories">
+        <div className="category-name active">Home</div>
+        <div className="category-name ">Future human</div>
+        <div className="category-name">Culture</div>
+        <div className="category-name">Tech</div>
+        <div className="category-name">Entrepreneurship</div>
+        <div className="category-name">Politics</div>
+        <div className="category-name">More</div>
       </div>
-      <div class="featured">
-        <div class="featured-cols big-size">
-          <div class="post">
-            <div class="post-img">
+      <div className="featured">
+        <div className="featured-cols big-size">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
-              <div class="title">The Gloves We'll Wear on Mars</div>
-              <div class="description">
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
                 The ultimate evening routine for cutting stress, creating
                 momentum, and cultivating happiness
               </div>
-              <div class="info">Author name in Category name</div>
-              <div class="date">Jul 2</div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
             </div>
           </div>
         </div>
-        <div class="featured-cols small-size">
-          <div class="post">
-            <div class="post-img">
+        <div className="featured-cols small-size">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
-              <div class="title">The Gloves We'll Wear on Mars</div>
-              <div class="description">
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
                 The ultimate evening routine for cutting stress, creating
                 momentum, and cultivating happiness
               </div>
-              <div class="info">Author name in Category name</div>
-              <div class="date">Jul 2</div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
             </div>
           </div>
-          <div class="post">
-            <div class="post-img">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
-              <div class="title">The Gloves We'll Wear on Mars</div>
-              <div class="description">
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
                 The design challenge that'll make or break survival on the Red
                 Planet
               </div>
-              <div class="info">Author name in Category name</div>
-              <div class="date">Jul 2</div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
             </div>
           </div>
-          <div class="post">
-            <div class="post-img">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
-              <div class="title">The Gloves We'll Wear on Mars</div>
-              <div class="description">
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
                 The design challenge that'll make or break survival on the Red
                 Planet
               </div>
-              <div class="info">Author name in Category name</div>
-              <div class="date">Jul 2</div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
             </div>
           </div>
         </div>
-        <div class="featured-cols small-size">
-          <div class="post">
-            <div class="post-img">
+        <div className="featured-cols small-size">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
-              <div class="title">The Gloves We'll Wear on Mars</div>
-              <div class="description">
+            <div className="post-data">
+              <div className="title">The Gloves We'll Wear on Mars</div>
+              <div className="description">
                 The design challenge that'll make or break survival on the Red
                 Planet
               </div>
-              <div class="info">Author name in Category name</div>
-              <div class="date">Jul 2</div>
+              <div className="info">Author name in Category name</div>
+              <div className="date">Jul 2</div>
             </div>
           </div>
         </div>
       </div>
-      <div class="featured-button">
+      <div className="featured-button">
         <a>See all featured</a>
       </div>
       <section>
-        <div class="section-main">
-          <div class="post">
-            <div class="post-img">
+        <div className="section-main">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
+            <div className="post-data">
               <div>
-                <div class="title">The Gloves We'll Wear on Mars</div>
-                <div class="description">
+                <div className="title">The Gloves We'll Wear on Mars</div>
+                <div className="description">
                   The ultimate evening routine for cutting stress, creating
                   momentum, and cultivating happiness
                 </div>
               </div>
               <div>
-                <div class="info">Author name in Category name</div>
-                <div class="date">Jul 2</div>
+                <div className="info">Author name in Category name</div>
+                <div className="date">Jul 2</div>
               </div>
             </div>
           </div>
-          <div class="post">
-            <div class="post-img">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
+            <div className="post-data">
               <div>
-                <div class="title">The Gloves We'll Wear on Mars</div>
-                <div class="description">
+                <div className="title">The Gloves We'll Wear on Mars</div>
+                <div className="description">
                   The ultimate evening routine for cutting stress, creating
                   momentum, and cultivating happiness
                 </div>
               </div>
               <div>
-                <div class="info">Author name in Category name</div>
-                <div class="date">Jul 2</div>
+                <div className="info">Author name in Category name</div>
+                <div className="date">Jul 2</div>
               </div>
             </div>
           </div>
-          <div class="post">
-            <div class="post-img">
+          <div className="post">
+            <div className="post-img">
               <img src={Img} alt="" />
             </div>
-            <div class="post-data">
+            <div className="post-data">
               <div>
-                <div class="title">The Gloves We'll Wear on Mars</div>
-                <div class="description">
+                <div className="title">The Gloves We'll Wear on Mars</div>
+                <div className="description">
                   The ultimate evening routine for cutting stress, creating
                   momentum, and cultivating happiness
                 </div>
               </div>
               <div>
-                <div class="info">Author name in Category name</div>
-                <div class="date">Jul 2</div>
+                <div className="info">Author name in Category name</div>
+                <div className="date">Jul 2</div>
               </div>
             </div>
           </div>
         </div>
-        <div class="section-side">
-          <div class="popular-col">
-            <div class="col-title title">Popular posts</div>
-            <div class="col-details">
-              <div class="post">
-                <div class="ranking">01</div>
-                <div class="post-data">
-                  <div class="title">The Gloves We'll Wear on Mars</div>
-                  <div class="description">
+        <div className="section-side">
+          <div className="popular-col">
+            <div className="col-title title">Popular posts</div>
+            <div className="col-details">
+              <div className="post">
+                <div className="ranking">01</div>
+                <div className="post-data">
+                  <div className="title">The Gloves We'll Wear on Mars</div>
+                  <div className="description">
                     The ultimate evening routine for cutting stress, creating
                     momentum, and cultivating happiness
                   </div>
-                  <div class="info">Author name in Category name</div>
-                  <div class="date">Jul 2</div>
+                  <div className="info">Author name in Category name</div>
+                  <div className="date">Jul 2</div>
                 </div>
               </div>
-              <div class="post">
-                <div class="ranking">02</div>
-                <div class="post-data">
-                  <div class="title">The Gloves We'll Wear on Mars</div>
-                  <div class="description">
+              <div className="post">
+                <div className="ranking">02</div>
+                <div className="post-data">
+                  <div className="title">The Gloves We'll Wear on Mars</div>
+                  <div className="description">
                     The ultimate evening routine for cutting stress, creating
                     momentum, and cultivating happiness
                   </div>
-                  <div class="info">Author name in Category name</div>
-                  <div class="date">Jul 2</div>
+                  <div className="info">Author name in Category name</div>
+                  <div className="date">Jul 2</div>
                 </div>
               </div>
             </div>
