@@ -8,6 +8,10 @@ const dataReducer = (state = initialData, action) => {
       return { ...state, [action.id]: action.data };
     case types.EDIT_DATA:
       return { ...state, [action.id]: action.data };
+    case types.DELETE_DATA:
+      const clone = { ...state };
+      delete clone[action.id];
+      return clone;
     default:
       return state;
   }
