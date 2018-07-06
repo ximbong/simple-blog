@@ -1,17 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Img from "../../assets/featured-1.jpg";
+import importAll from "../../handler";
+
 import "./index.css";
 
 const Post = props => {
-  const { title, description, id } = props.data;
+  const { title, description, id, url } = props.data;
+  const images = importAll(require.context("../../assets", false, /.jpeg/));
 
   return (
     <Link to={`/post/${id}`}>
       <div className="post">
         <div className="post-img">
-          <img src={Img} alt="" />
+          <img src={images[url]} alt="" />
         </div>
         <div className="post-data">
           <div>
