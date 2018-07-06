@@ -1,6 +1,6 @@
 import * as types from "../actions";
 
-const initialID = 0;
+const initialID = 10;
 
 const idReducer = (state = initialID, action) => {
   switch (action.type) {

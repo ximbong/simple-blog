@@ -1,6 +1,7 @@
 import * as types from "../actions";
+import data from "../data";
 
-const initialData = {};
+const initialData = data;
 
 const dataReducer = (state = initialData, action) => {
   switch (action.type) {
