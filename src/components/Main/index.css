@@ -34,18 +34,21 @@
   display: block;
 }
 
-.featured-cols > .post {
+.featured-cols .post {
   display: grid;
   grid-template-columns: 100px 1fr;
   grid-template-rows: 100px;
   grid-gap: 15px;
+  font-size: 90%;
 }
 
-.featured-cols:first-child > .post {
+.featured-cols:first-child .post {
   display: block;
 }
 
-/* small size */
+.small-size {
+  overflow: hidden;
+}
 
 .small-size .post-img > img {
   height: 100px;
@@ -114,6 +117,7 @@ section {
   grid-template-columns: 1fr 150px;
   grid-template-areas: "data img";
   margin-bottom: 45px;
+  grid-gap: 20px;
 }
 
 .section-main .post-img {

@@ -13,21 +13,24 @@
 }
 
 .editor .inputs {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   display: grid;
   grid-template-columns: 1fr auto;
-  align-items: center;
+  grid-gap: 60px;
+  overflow: hidden;
 }
 
-.editor .inputs div {
-  margin-right: 40px;
+.editor .inputs > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .editor .inputs select {
   height: 50%;
 }
 
-.editor input {
+.editor input[type="text"] {
   width: 100%;
   margin-bottom: 15px;
   padding: 5px;
@@ -47,4 +50,22 @@
 
 .buttons > * {
   margin-right: 20px;
+}
+
+.image_previewer {
+  border: 1px solid var(--light-grey-color);
+  height: 100%;
+  overflow: hidden;
+}
+
+.image_previewer img {
+  display: block;
+  object-fit: cover;
+  height: 160px;
+  width: 200px;
+}
+
+.select_image {
+  display: flex;
+  justify-content: space-between;
 }
