@@ -1,38 +1,45 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
+
 import Post from "../Post";
+import category from "../../category.js";
 
 import "./index.css";
 
-const Main = props => {
-  const data = props.data;
-  const PostList = Object.values(data).map((e, i) => {
-    return <Post data={data[i]} key={i} />;
+const Main = ({ featured_posts, all_posts }) => {
+  const CategoryButtons = Object.keys(category).map(e => {
+    return (
+      <Link to={`/category/${e}`} key={e}>
+        <div className="category-name">{category[e]}</div>
+      </Link>
+    );
   });
 
-  const FirstColumnPost = PostList[0];
-  const SecondColumnPost = PostList.slice(1, 4);
-  const ThirdColumnPost = PostList.slice(4, 7);
+  const FeaturedPostList = Object.values(featured_posts).map((e, i) => {
+    return <Post data={featured_posts[i]} key={i} />;
+  });
+
+  const PostList = Object.values(all_posts).map((e, i) => {
+    return <Post data={all_posts[i]} key={i} />;
+  });
+
+  const FirstColumnPost = FeaturedPostList[0];
+  const SecondColumnPost = FeaturedPostList.slice(1, 4);
+  const ThirdColumnPost = FeaturedPostList.slice(4, 7);
 
   return (
     <React.Fragment>
-      <div className="categories">
-        <div className="category-name active">Home</div>
-        <div className="category-name ">Future human</div>
-        <div className="category-name">Culture</div>
-        <div className="category-name">Tech</div>
-        <div className="category-name">Entrepreneurship</div>
-        <div className="category-name">Politics</div>
-        <div className="category-name">More</div>
-      </div>
+      <div className="categories">{CategoryButtons}</div>
       <div className="featured">
         <div className="featured-cols big-size">{FirstColumnPost}</div>
         <div className="featured-cols small-size">{SecondColumnPost}</div>
         <div className="featured-cols small-size">{ThirdColumnPost}</div>
       </div>
       <div className="featured-button">
-        <a>See all featured</a>
+        <Link to="/featured">See all featured </Link>
       </div>
+
       <section>
         <div className="section-main">{PostList}</div>
         <div className="section-side">
@@ -71,10 +78,4 @@ const Main = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    data: state.data
-  };
-};
-
-export default connect(mapStateToProps, null)(Main);
+export default Main;

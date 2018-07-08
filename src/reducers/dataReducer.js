@@ -5,10 +5,14 @@ const initialData = data;
 
 const dataReducer = (state = initialData, action) => {
   switch (action.type) {
-    case types.ADD_DATA:
-      return { ...state, [action.id]: action.data };
-    case types.EDIT_DATA:
-      return { ...state, [action.id]: action.data };
+    case types.ADD_DATA: {
+      const newAllPosts = { ...state.all_posts, [action.id]: action.data };
+      return { ...state, all_posts: newAllPosts };
+    }
+    case types.EDIT_DATA: {
+      const newAllPosts = { ...state.all_posts, [action.id]: action.data };
+      return { ...state, all_posts: newAllPosts };
+    }
     case types.DELETE_DATA:
       const clone = { ...state };
       delete clone[action.id];

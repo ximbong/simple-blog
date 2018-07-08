@@ -9,7 +9,7 @@ import "./index.css";
 
 const Displayer = props => {
   const id = parseInt(props.match.params.id, 10);
-  const data = props.displayData(id);
+  const data = props.displayDataById(id);
 
   return (
     <div className="displayer">

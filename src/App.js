@@ -8,12 +8,22 @@ import Editor from "./components/Editor";
 import Displayer from "./components/Displayer";
 import Profile from "./components/Profile";
 import Main from "./components/Main";
+import Category from "./components/Category";
+import Featured from "./components/Featured";
 
 import "./App.css";
 
 class App extends Component {
-  displayData = id => {
+  displayDataById = id => {
     return this.props.data[id];
+  };
+
+  displayDataByCategory = name => {
+    return Object.values(this.props.data).filter(e => e.category === name);
+  };
+
+  displayMyPost = id => {
+    return Object.values(this.props.data).filter(e => e.author_id === id);
   };
 
   render() {
@@ -21,7 +31,16 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <Route path="/" render={props => <NavBar {...props} />} />
-          <Route path="/" exact={true} component={Main} />
+          <Route
+            path="/"
+            exact={true}
+            render={() => (
+              <Main
+                featured_posts={this.props.featured_posts}
+                all_posts={this.props.data}
+              />
+            )}
+          />
 
           <Route path="/new" render={() => <SectionLine action="add" />} />
           <Route
@@ -36,7 +55,7 @@ class App extends Component {
           <Route
             path="/post/:id"
             render={props => (
-              <Displayer displayData={this.displayData} {...props} />
+              <Displayer displayDataById={this.displayDataById} {...props} />
             )}
           />
 
@@ -47,15 +66,47 @@ class App extends Component {
           <Route
             path="/edit/:id"
             render={props => (
-              <Editor displayData={this.displayData} action="edit" {...props} />
+              <Editor
+                displayDataById={this.displayDataById}
+                action="edit"
+                {...props}
+              />
             )}
           />
 
           <Route
             path="/profile"
-            render={() => <SectionLine action="view-list" />}
+            render={() => <SectionLine action="view_list" />}
           />
-          <Route path="/profile" component={Profile} />
+          <Route
+            path="/profile"
+            render={() => <Profile displayMyPost={this.displayMyPost} />}
+          />
+
+          <Route
+            path="/category/:name"
+            render={props => <SectionLine action="view_category" {...props} />}
+          />
+          <Route
+            path="/category/:name"
+            render={props => (
+              <Category
+                displayDataByCategory={this.displayDataByCategory}
+                {...props}
+              />
+            )}
+          />
+
+          <Route
+            path="/featured"
+            render={() => <SectionLine action="view_featured" />}
+          />
+          <Route
+            path="/featured"
+            render={() => (
+              <Featured featured_posts={this.props.featured_posts} />
+            )}
+          />
         </React.Fragment>
       </Router>
     );
@@ -64,8 +115,12 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.data
+    featured_posts: state.data.featured_posts,
+    data: state.data.all_posts
   };
 };
 
-export default connect(mapStateToProps, null)(App);
+export default connect(
+  mapStateToProps,
+  null
+)(App);
