@@ -15,8 +15,11 @@ const Profile = ({ data }) => {
 
 const mapStateToProps = state => {
   return {
-    data: state.data
+    data: state.data.all_posts
   };
 };
 
-export default connect(mapStateToProps, null)(Profile);
+export default connect(
+  mapStateToProps,
+  null
+)(Profile);

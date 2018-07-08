@@ -6,14 +6,14 @@ import importAll from "../../handler";
 import "./index.css";
 
 const Post = props => {
-  const { title, description, id, url } = props.data;
+  const { title, description, id, image_url } = props.data;
   const images = importAll(require.context("../../assets", false, /.jpeg/));
 
   return (
     <Link to={`/post/${id}`}>
       <div className="post">
         <div className="post-img">
-          <img src={images[url]} alt="" />
+          <img src={images[image_url]} alt="" />
         </div>
         <div className="post-data">
           <div>
