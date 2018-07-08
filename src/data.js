@@ -1,7 +1,7 @@
 const data = {
   featured_posts: {
     0: {
-      title: "Psychology of Code Readability",
+      title: "Post 0",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -12,7 +12,7 @@ const data = {
       author_id: 0
     },
     1: {
-      title: "How to Be a Future Human",
+      title: "Post 1",
       category: "future_human",
       description: "Change is coming. Where do you want to land?",
       content:
@@ -22,7 +22,7 @@ const data = {
       author_id: 0
     },
     2: {
-      title: "What Happens When a Computer Runs Your Life",
+      title: "Post 2",
       category: "tech",
       description:
         "This software engineer let an algorithm pick where he lives, what he does—even what tattoo to get. Is he onto something?",
@@ -33,7 +33,7 @@ const data = {
       author_id: 0
     },
     3: {
-      title: "Psychology of Code Readability",
+      title: "Post 3",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -44,7 +44,7 @@ const data = {
       author_id: 1
     },
     4: {
-      title: "Psychology of Code Readability",
+      title: "Post 4",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -55,7 +55,7 @@ const data = {
       author_id: 2
     },
     5: {
-      title: "Psychology of Code Readability",
+      title: "Post 5",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -66,7 +66,7 @@ const data = {
       author_id: 0
     },
     6: {
-      title: "Psychology of Code Readability",
+      title: "Post 6",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -77,7 +77,7 @@ const data = {
       author_id: 0
     },
     7: {
-      title: "Psychology of Code Readability",
+      title: "Post 7",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -88,7 +88,7 @@ const data = {
       author_id: 1
     },
     8: {
-      title: "Psychology of Code Readability",
+      title: "Post 8",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -99,7 +99,7 @@ const data = {
       author_id: 2
     },
     9: {
-      title: "Psychology of Code Readability",
+      title: "Post 9",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -112,7 +112,7 @@ const data = {
   },
   all_posts: {
     0: {
-      title: "Psychology of Code Readability",
+      title: "Post 0",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -123,7 +123,7 @@ const data = {
       author_id: 0
     },
     1: {
-      title: "How to Be a Future Human",
+      title: "Post 1",
       category: "future_human",
       description: "Change is coming. Where do you want to land?",
       content:
@@ -133,7 +133,7 @@ const data = {
       author_id: 0
     },
     2: {
-      title: "What Happens When a Computer Runs Your Life",
+      title: "Post 2",
       category: "tech",
       description:
         "This software engineer let an algorithm pick where he lives, what he does—even what tattoo to get. Is he onto something?",
@@ -144,7 +144,7 @@ const data = {
       author_id: 0
     },
     3: {
-      title: "Psychology of Code Readability",
+      title: "Post 3",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -155,7 +155,7 @@ const data = {
       author_id: 1
     },
     4: {
-      title: "Psychology of Code Readability",
+      title: "Post 4",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -166,7 +166,7 @@ const data = {
       author_id: 2
     },
     5: {
-      title: "Psychology of Code Readability",
+      title: "Post 5",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -177,7 +177,7 @@ const data = {
       author_id: 0
     },
     6: {
-      title: "Psychology of Code Readability",
+      title: "Post 6",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -188,7 +188,7 @@ const data = {
       author_id: 0
     },
     7: {
-      title: "Psychology of Code Readability",
+      title: "Post 7",
       category: "politics",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -199,7 +199,7 @@ const data = {
       author_id: 1
     },
     8: {
-      title: "Psychology of Code Readability",
+      title: "Post 8",
       category: "more",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -210,7 +210,7 @@ const data = {
       author_id: 2
     },
     9: {
-      title: "Psychology of Code Readability",
+      title: "Post 9",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -221,7 +221,7 @@ const data = {
       author_id: 1
     },
     10: {
-      title: "Psychology of Code Readability",
+      title: "Post 10",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -232,7 +232,7 @@ const data = {
       author_id: 0
     },
     11: {
-      title: "How to Be a Future Human",
+      title: "Post 11",
       category: "future_human",
       description: "Change is coming. Where do you want to land?",
       content:
@@ -242,7 +242,7 @@ const data = {
       author_id: 0
     },
     12: {
-      title: "What Happens When a Computer Runs Your Life",
+      title: "Post 12",
       category: "more",
       description:
         "This software engineer let an algorithm pick where he lives, what he does—even what tattoo to get. Is he onto something?",
@@ -253,7 +253,7 @@ const data = {
       author_id: 0
     },
     13: {
-      title: "Psychology of Code Readability",
+      title: "Post 13",
       category: "more",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -264,7 +264,7 @@ const data = {
       author_id: 1
     },
     14: {
-      title: "Psychology of Code Readability",
+      title: "Post 14",
       category: "more",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -275,7 +275,7 @@ const data = {
       author_id: 2
     },
     15: {
-      title: "Psychology of Code Readability",
+      title: "Post 15",
       category: "politics",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -286,7 +286,7 @@ const data = {
       author_id: 0
     },
     16: {
-      title: "Psychology of Code Readability",
+      title: "Post 16",
       category: "entrepreneurship",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -297,7 +297,7 @@ const data = {
       author_id: 0
     },
     17: {
-      title: "Psychology of Code Readability",
+      title: "Post 17",
       category: "future_human",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -308,7 +308,7 @@ const data = {
       author_id: 1
     },
     18: {
-      title: "Psychology of Code Readability",
+      title: "Post 18",
       category: "culture",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
@@ -319,7 +319,7 @@ const data = {
       author_id: 2
     },
     19: {
-      title: "Psychology of Code Readability",
+      title: "Post 19",
       category: "tech",
       description:
         "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
