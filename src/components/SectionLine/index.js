@@ -22,6 +22,9 @@ const SectionLine = props => {
       const name = props.match.params.name;
       title = category[name];
       break;
+    case "view_featured":
+      title = "Featured Posts";
+      break;
     default:
       title = "Edit Post";
   }
