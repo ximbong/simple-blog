@@ -22,6 +22,7 @@ class App extends Component {
         <React.Fragment>
           <Route path="/" render={props => <NavBar {...props} />} />
           <Route path="/" exact={true} component={Main} />
+
           <Route path="/new" render={() => <SectionLine action="add" />} />
           <Route
             path="/new"

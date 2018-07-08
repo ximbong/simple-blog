@@ -45,7 +45,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 4,
     url: "featured-5.jpeg"
   },
   5: {
@@ -55,7 +55,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 5,
     url: "featured-6.jpeg"
   },
   6: {
@@ -65,7 +65,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 6,
     url: "featured-7.jpeg"
   },
   7: {
@@ -75,7 +75,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 7,
     url: "featured-8.jpeg"
   },
   8: {
@@ -85,7 +85,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 8,
     url: "featured-9.jpeg"
   },
   9: {
@@ -95,7 +95,7 @@ const data = {
       "By no means should this be regarded as truth, but rather a model that I’ve found extremely helpful in understanding and finding better ways of writing code.",
     content:
       "What makes some piece of code more readable than another? It’s one thing to say that it uses better variable names, but what makes a certain variable name easier to read? I really mean digging deeper into human psyche. It is our brain that is doing all the processing after all.",
-    id: 0,
+    id: 9,
     url: "featured-1.jpeg"
   }
 };
