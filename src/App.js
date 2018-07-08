@@ -8,12 +8,17 @@ import Editor from "./components/Editor";
 import Displayer from "./components/Displayer";
 import Profile from "./components/Profile";
 import Main from "./components/Main";
+import Category from "./components/Category";
 
 import "./App.css";
 
 class App extends Component {
-  displayData = id => {
+  displayDataById = id => {
     return this.props.data[id];
+  };
+
+  displayDataByCategory = name => {
+    return Object.values(this.props.data).filter(e => e.category === name);
   };
 
   render() {
@@ -36,7 +41,7 @@ class App extends Component {
           <Route
             path="/post/:id"
             render={props => (
-              <Displayer displayData={this.displayData} {...props} />
+              <Displayer displayDataById={this.displayDataById} {...props} />
             )}
           />
 
@@ -47,15 +52,33 @@ class App extends Component {
           <Route
             path="/edit/:id"
             render={props => (
-              <Editor displayData={this.displayData} action="edit" {...props} />
+              <Editor
+                displayDataById={this.displayDataById}
+                action="edit"
+                {...props}
+              />
             )}
           />
 
           <Route
             path="/profile"
-            render={() => <SectionLine action="view-list" />}
+            render={() => <SectionLine action="view_list" />}
           />
           <Route path="/profile" component={Profile} />
+
+          <Route
+            path="/category/:name"
+            render={props => <SectionLine action="view_category" {...props} />}
+          />
+          <Route
+            path="/category/:name"
+            render={props => (
+              <Category
+                displayDataByCategory={this.displayDataByCategory}
+                {...props}
+              />
+            )}
+          />
         </React.Fragment>
       </Router>
     );
@@ -64,8 +87,11 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.data
+    data: state.data.all_posts
   };
 };
 
-export default connect(mapStateToProps, null)(App);
+export default connect(
+  mapStateToProps,
+  null
+)(App);
