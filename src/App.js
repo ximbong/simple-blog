@@ -31,7 +31,16 @@ class App extends Component {
       <Router>
         <React.Fragment>
           <Route path="/" render={props => <NavBar {...props} />} />
-          <Route path="/" exact={true} component={Main} />
+          <Route
+            path="/"
+            exact={true}
+            render={() => (
+              <Main
+                featured_posts={this.props.featured_posts}
+                all_posts={this.props.data}
+              />
+            )}
+          />
 
           <Route path="/new" render={() => <SectionLine action="add" />} />
           <Route

@@ -78,14 +78,4 @@ const Main = ({ featured_posts, all_posts }) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    featured_posts: state.data.featured_posts,
-    all_posts: state.data.all_posts
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  null
-)(Main);
+export default Main;
