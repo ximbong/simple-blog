@@ -7,7 +7,7 @@ import category from "../../category.js";
 
 import "./index.css";
 
-const Main = ({ featured_posts }) => {
+const Main = ({ featured_posts, all_posts }) => {
   const CategoryButtons = Object.keys(category).map(e => {
     return (
       <Link to={`/category/${e}`} key={e}>
@@ -16,13 +16,17 @@ const Main = ({ featured_posts }) => {
     );
   });
 
-  const PostList = Object.values(featured_posts).map((e, i) => {
+  const FeaturedPostList = Object.values(featured_posts).map((e, i) => {
     return <Post data={featured_posts[i]} key={i} />;
   });
 
-  const FirstColumnPost = PostList[0];
-  const SecondColumnPost = PostList.slice(1, 4);
-  const ThirdColumnPost = PostList.slice(4, 7);
+  const PostList = Object.values(all_posts).map((e, i) => {
+    return <Post data={all_posts[i]} key={i} />;
+  });
+
+  const FirstColumnPost = FeaturedPostList[0];
+  const SecondColumnPost = FeaturedPostList.slice(1, 4);
+  const ThirdColumnPost = FeaturedPostList.slice(4, 7);
 
   return (
     <React.Fragment>
@@ -33,8 +37,9 @@ const Main = ({ featured_posts }) => {
         <div className="featured-cols small-size">{ThirdColumnPost}</div>
       </div>
       <div className="featured-button">
-        <a>See all featured</a>
+        <Link to="/featured">See all featured </Link>
       </div>
+
       <section>
         <div className="section-main">{PostList}</div>
         <div className="section-side">
@@ -75,7 +80,8 @@ const Main = ({ featured_posts }) => {
 
 const mapStateToProps = state => {
   return {
-    featured_posts: state.data.featured_posts
+    featured_posts: state.data.featured_posts,
+    all_posts: state.data.all_posts
   };
 };
 

@@ -9,6 +9,7 @@ import Displayer from "./components/Displayer";
 import Profile from "./components/Profile";
 import Main from "./components/Main";
 import Category from "./components/Category";
+import Featured from "./components/Featured";
 
 import "./App.css";
 
@@ -19,6 +20,10 @@ class App extends Component {
 
   displayDataByCategory = name => {
     return Object.values(this.props.data).filter(e => e.category === name);
+  };
+
+  displayMyPost = id => {
+    return Object.values(this.props.data).filter(e => e.author_id === id);
   };
 
   render() {
@@ -64,7 +69,10 @@ class App extends Component {
             path="/profile"
             render={() => <SectionLine action="view_list" />}
           />
-          <Route path="/profile" component={Profile} />
+          <Route
+            path="/profile"
+            render={() => <Profile displayMyPost={this.displayMyPost} />}
+          />
 
           <Route
             path="/category/:name"
@@ -79,6 +87,17 @@ class App extends Component {
               />
             )}
           />
+
+          <Route
+            path="/featured"
+            render={() => <SectionLine action="view_featured" />}
+          />
+          <Route
+            path="/featured"
+            render={() => (
+              <Featured featured_posts={this.props.featured_posts} />
+            )}
+          />
         </React.Fragment>
       </Router>
     );
@@ -87,6 +106,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
+    featured_posts: state.data.featured_posts,
     data: state.data.all_posts
   };
 };
