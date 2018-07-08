@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Link, BrowserRouter } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import importAll from "../../handler";
 import * as types from "../../actions";
+import category from "../../category";
 
 import "./index.css";
 
@@ -15,7 +16,7 @@ class Editor extends Component {
       ? parseInt(props.match.params.id, 10)
       : this.props.id;
 
-    const data = this.props.displayData && this.props.displayData(id);
+    const data = this.props.displayDataById && this.props.displayDataById(id);
 
     const title = data ? data.title : "";
     const description = data ? data.description : "";
@@ -52,10 +53,14 @@ class Editor extends Component {
   };
 
   render() {
-    const { title, category, description, content, id, url } = this.state;
+    const { title, description, content, id, url } = this.state;
     const { action, history } = this.props;
 
     const images = importAll(require.context("../../assets", false, /.jpeg/));
+
+    const optionlist = Object.keys(category).map(e => {
+      return <option value={e}>{category[e]}</option>;
+    });
 
     return (
       <div className="editor">
@@ -75,16 +80,10 @@ class Editor extends Component {
             />
             <div className="select_image">
               <select
-                value={category}
+                value={this.state.category}
                 onChange={e => this.handle(e, "category")}
               >
-                <option value="home">HOME</option>
-                <option value="future_human">FUTURE HUMAN</option>
-                <option value="culture">CULTURE</option>
-                <option value="tech">TECH</option>
-                <option value="entrepreneurship">ENTREPRENEURSHIP</option>
-                <option value="politics">POLITICS</option>
-                <option value="more">MORE</option>
+                {optionlist}
               </select>
               <input
                 type="file"
@@ -95,7 +94,7 @@ class Editor extends Component {
             </div>
           </div>
           <div className="image_previewer">
-            <img id="target" src={images[url]} />
+            <img id="target" src={images[url]} alt="" />
           </div>
         </div>
         <textarea
@@ -141,4 +140,7 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Editor);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Editor);
