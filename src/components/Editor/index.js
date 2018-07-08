@@ -21,7 +21,7 @@ class Editor extends Component {
     const title = data ? data.title : "";
     const description = data ? data.description : "";
     const content = data ? data.content : "";
-    const category = data ? data.category : "home";
+    const category = data ? data.category : "future_human";
     const image_url = data ? data.image_url : "default-image.jpeg";
 
     this.state = {
