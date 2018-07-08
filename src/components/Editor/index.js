@@ -22,7 +22,7 @@ class Editor extends Component {
     const description = data ? data.description : "";
     const content = data ? data.content : "";
     const category = data ? data.category : "home";
-    const url = data ? data.url : "default-image.jpeg";
+    const image_url = data ? data.image_url : "default-image.jpeg";
 
     this.state = {
       title,
@@ -30,7 +30,8 @@ class Editor extends Component {
       description,
       content,
       id,
-      url
+      image_url,
+      author_id: 0
     };
   }
 
@@ -45,7 +46,7 @@ class Editor extends Component {
       let reader = new FileReader();
       reader.onload = e => {
         this.setState({
-          url: e.target.result
+          image_url: e.target.result
         });
       };
       reader.readAsDataURL(event.target.files[0]);
@@ -53,13 +54,17 @@ class Editor extends Component {
   };
 
   render() {
-    const { title, description, content, id, url } = this.state;
+    const { title, description, content, id, image_url } = this.state;
     const { action, history } = this.props;
 
     const images = importAll(require.context("../../assets", false, /.jpeg/));
 
     const optionlist = Object.keys(category).map(e => {
-      return <option value={e}>{category[e]}</option>;
+      return (
+        <option value={e} key={e}>
+          {category[e]}
+        </option>
+      );
     });
 
     return (
@@ -94,7 +99,7 @@ class Editor extends Component {
             </div>
           </div>
           <div className="image_previewer">
-            <img id="target" src={images[url]} alt="" />
+            <img id="target" src={images[image_url]} alt="" />
           </div>
         </div>
         <textarea
@@ -118,7 +123,6 @@ class Editor extends Component {
 
 const mapStateToProps = state => {
   return {
-    data: state.data,
     id: state.id
   };
 };

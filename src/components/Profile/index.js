@@ -1,11 +1,14 @@
 import React from "react";
-import { connect } from "react-redux";
 
 import Post from "../Post";
 
 import "./index.css";
 
-const Profile = ({ data }) => {
+const my_ID = 0; //hard coded ID to simulate profile view
+
+const Profile = props => {
+  const data = props.displayMyPost(my_ID);
+
   const PostList = Object.keys(data).map(key => {
     return <Post data={data[key]} key={key} />;
   });
@@ -13,13 +16,4 @@ const Profile = ({ data }) => {
   return <div className="my-posts">{PostList}</div>;
 };
 
-const mapStateToProps = state => {
-  return {
-    data: state.data.all_posts
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  null
-)(Profile);
+export default Profile;
