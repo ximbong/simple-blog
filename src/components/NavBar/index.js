@@ -9,16 +9,15 @@ import "./index.css";
 const NavBar = props => {
   const location = props.location.pathname;
 
-  const LeftNavButton =
-    location === "/simple-blog/" ? (
-      <Link to="/new">
-        <button>New post</button>
-      </Link>
-    ) : (
-      <Link to="/simple-blog">
-        <button>Back to Home</button>
-      </Link>
-    );
+  const LeftNavButton = location.includes("/simple-blog") ? (
+    <Link to="/new">
+      <button>New post</button>
+    </Link>
+  ) : (
+    <Link to="/simple-blog">
+      <button>Back to Home</button>
+    </Link>
+  );
 
   return (
     <nav>

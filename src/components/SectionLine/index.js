@@ -32,7 +32,7 @@ const SectionLine = props => {
   return (
     <div className="section-line">
       <a className="section-title">{title}</a>
-      {props.action === "view-list" && (
+      {props.action === "view_list" && (
         <Link className="link-button" to="/new">
           <button>New post</button>
         </Link>
