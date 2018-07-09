@@ -26,7 +26,12 @@ class App extends Component {
     return Object.values(this.props.data).filter(e => e.author_id === id);
   };
 
+  displayFeaturedPosts = array => {
+    return array.map(id => this.props.data[id]);
+  };
   render() {
+    const featured_posts = this.displayFeaturedPosts(this.props.featured_posts);
+
     return (
       <Router>
         <React.Fragment>
@@ -36,7 +41,7 @@ class App extends Component {
             exact={true}
             render={() => (
               <Main
-                featured_posts={this.props.featured_posts}
+                featured_posts={featured_posts}
                 all_posts={this.props.data}
               />
             )}
@@ -103,9 +108,7 @@ class App extends Component {
           />
           <Route
             path="/featured"
-            render={() => (
-              <Featured featured_posts={this.props.featured_posts} />
-            )}
+            render={() => <Featured featured_posts={featured_posts} />}
           />
         </React.Fragment>
       </Router>

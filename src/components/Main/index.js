@@ -16,8 +16,8 @@ const Main = ({ featured_posts, all_posts }) => {
     );
   });
 
-  const FeaturedPostList = Object.values(featured_posts).map((e, i) => {
-    return <Post data={featured_posts[i]} key={i} />;
+  const FeaturedPostList = featured_posts.map(e => {
+    return <Post data={e} key={e.id} />;
   });
 
   const PostList = Object.values(all_posts).map((e, i) => {
