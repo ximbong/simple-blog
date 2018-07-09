@@ -3,20 +3,22 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 import * as types from "../../actions";
+import importAll from "../../handler";
 
 import "font-awesome/css/font-awesome.min.css";
 import "./index.css";
 
 const Displayer = props => {
   const id = parseInt(props.match.params.id, 10);
-  const data = props.displayDataById(id);
+  const { title, description, image_url, content } = props.displayDataById(id);
 
+  const images = importAll(require.context("../../assets", false, /.jpeg/));
   return (
     <div className="displayer">
       <div className="post-header">
         <div>
-          <div className="title">{data.title}</div>
-          <div className="description">{data.description}</div>
+          <div className="title">{title}</div>
+          <div className="description">{description}</div>
         </div>
         <div className="header-icons">
           <div className="edit">
@@ -31,7 +33,10 @@ const Displayer = props => {
           </div>
         </div>
       </div>
-      <div className="content">{data.content}</div>
+      <div className="post-img">
+        <img src={images[image_url]} />
+      </div>
+      <div className="content">{content}</div>
     </div>
   );
 };
@@ -46,7 +51,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Displayer);
+export default connect(null, mapDispatchToProps)(Displayer);
