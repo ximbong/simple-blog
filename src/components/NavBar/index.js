@@ -10,7 +10,7 @@ const NavBar = props => {
   const location = props.location.pathname;
 
   const LeftNavButton =
-    location === "/simple-blog" ? (
+    location === "/simple-blog/" ? (
       <Link to="/new">
         <button>New post</button>
       </Link>

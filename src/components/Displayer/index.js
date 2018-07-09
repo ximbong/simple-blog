@@ -34,7 +34,7 @@ const Displayer = props => {
         </div>
       </div>
       <div className="post-img">
-        <img src={images[image_url]} />
+        <img src={images[image_url]} alt="" />
       </div>
       <div className="content">{content}</div>
     </div>
