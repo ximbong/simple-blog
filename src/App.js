@@ -32,7 +32,7 @@ class App extends Component {
         <React.Fragment>
           <Route path="/" render={props => <NavBar {...props} />} />
           <Route
-            path="/"
+            path="/simple-blog"
             exact={true}
             render={() => (
               <Main
@@ -120,7 +120,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(
-  mapStateToProps,
-  null
-)(App);
+export default connect(mapStateToProps, null)(App);

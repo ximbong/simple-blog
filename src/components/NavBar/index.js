@@ -10,12 +10,12 @@ const NavBar = props => {
   const location = props.location.pathname;
 
   const LeftNavButton =
-    location === "/" ? (
+    location === "/simple-blog" ? (
       <Link to="/new">
         <button>New post</button>
       </Link>
     ) : (
-      <Link to="/">
+      <Link to="/simple-blog">
         <button>Back to Home</button>
       </Link>
     );
@@ -23,7 +23,7 @@ const NavBar = props => {
   return (
     <nav>
       {LeftNavButton}
-      <Link to="/">
+      <Link to="/simple-blog">
         <img src={MainIcon} alt="main-logo" className="main-logo" />
       </Link>
       <div className="avatar">
