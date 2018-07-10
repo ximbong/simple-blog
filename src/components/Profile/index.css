@@ -26,3 +26,17 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+@media (max-width: 700px) {
+  .my-posts {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: var(--side-padding);
+    grid-row-gap: 30px;
+  }
+}
+
+@media (max-width: 450px) {
+  .my-posts {
+    grid-template-columns: 1fr;
+  }
+}

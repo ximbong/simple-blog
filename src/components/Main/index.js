@@ -33,7 +33,9 @@ const Main = ({ featured_posts, all_posts }) => {
       <div className="featured">
         <div className="featured-cols big-size">{FirstColumnPost}</div>
         <div className="featured-cols small-size">{SecondColumnPost}</div>
-        <div className="featured-cols small-size">{ThirdColumnPost}</div>
+        <div className="featured-cols small-size small-hidden">
+          {ThirdColumnPost}
+        </div>
       </div>
       <div className="featured-button">
         <Link to="/featured">See all featured </Link>

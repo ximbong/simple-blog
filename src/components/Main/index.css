@@ -9,8 +9,8 @@
 }
 
 .category-name {
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 8px;
+  margin-bottom: 15px;
   padding: 8px 0;
   text-transform: uppercase;
   color: var(--dark-grey-color);
@@ -74,6 +74,7 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  margin-bottom: 0 !important;
 }
 
 .post-data {
@@ -96,7 +97,7 @@
   text-transform: uppercase;
   color: #3dbd9e;
   border-bottom: 1px solid var(--light-grey-color);
-  margin-bottom: 30px !important;
+  margin-bottom: 50px !important;
 }
 
 .featured-button:hover {
@@ -105,6 +106,7 @@
 }
 
 /* main section post */
+
 section {
   padding: 0 var(--side-padding);
   display: grid;
@@ -137,8 +139,13 @@ section {
 }
 
 /* side */
+
 .section-side {
-  margin: 0 32px;
+  margin-left: 32px;
+}
+
+.section-side .description {
+  white-space: normal !important;
 }
 
 .col-details {
@@ -147,7 +154,7 @@ section {
 
 .section-side .col-title {
   border-bottom: 1px solid var(--light-grey-color);
-  padding: 15px;
+  padding: 15px 5px;
 }
 
 .section-side .post {
@@ -172,4 +179,61 @@ section {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+@media (max-width: 1000px) {
+  .featured {
+    grid-template-columns: 1fr 1fr;
+  }
+  .small-hidden {
+    display: none;
+  }
+  section {
+    grid-gap: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .categories {
+    font-size: 90%;
+  }
+}
+
+@media (max-width: 550px) {
+  body {
+    font-size: 90%;
+  }
+  .featured {
+    grid-template-columns: 1fr;
+  }
+  .section-side {
+    margin-left: 16px;
+  }
+  .section-main .post {
+    grid-template-columns: 1fr 100px;
+    grid-gap: 5px;
+  }
+  .section-side .post {
+    grid-gap: 5px;
+  }
+  .section-main .post-img > img {
+    height: 100px;
+    width: 100px;
+  }
+  section {
+    grid-template-columns: 1fr;
+  }
+  .section-side {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .categories {
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  .category-name {
+    padding: 8px var(--side-padding);
+  }
 }

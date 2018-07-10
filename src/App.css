@@ -66,3 +66,21 @@ button:hover {
 .date {
   font-size: 90%;
 }
+
+@media (max-width: 1400px) {
+  :root {
+    --side-padding: 5%;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --side-padding: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+    --side-padding: 15px;
+  }
+}
